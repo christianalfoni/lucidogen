@@ -1,0 +1,15 @@
+{
+  "name": "lucidogen-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "repo-cooker build",
+    "release": "repo-cooker release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucidogen/lucidogen.git"
+  },
+  "dependencies": {}
+}
