@@ -18,8 +18,8 @@ notifications:
 script:
 - |
   if [[ $SKIP_TESTS != 'true' ]]; then
-    npm run lint
-    npm test
+    npm run lint;
+    npm test;
   fi
 after_success:
 - |
@@ -29,12 +29,12 @@ after_success:
     git config --global user.name "Lucidogen Bot";
   fi
   if [[ $TRAVIS_BRANCH == 'master' || $TRAVIS_PULL_REQUEST == 'true' ]]; then
-    # repo-cooker coverage:upload
+    # repo-cooker coverage:upload;
   fi
   if [[ $TRAVIS_BRANCH == 'master' || $TRAVIS_BRANCH == 'next' ]] && [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then
-    printf "//registry.npmjs.org/:_authToken=$NPM_TOKEN\n" > ~/.npmrc
-    npm install --no-save nodegit@0.20.3
-    npm run release
+    printf "//registry.npmjs.org/:_authToken=$NPM_TOKEN\n" > ~/.npmrc;
+    npm install --no-save nodegit@0.20.3;
+    npm run release;
   fi
 branches:
   except:
