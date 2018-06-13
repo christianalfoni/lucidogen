@@ -12,15 +12,18 @@ Monorepo for Lucidity app and other open source modules (blocks, dialog, crypt, 
 
 ## Packages
 
-- @lucidogen/test-repo [![NPM version][test-repo-image]][test-repo-url]
+- [![NPM version][test-repo-image]][test-repo-npm] [@lucidogen/test-repo][test-repo-url]
+  (blueprint for other packages)
 
+[test-repo-url]: https://github.com/lucidogen/lucidogen/tree/next/packages/node_modules/@lucidogen/test-repo
 [test-repo-image]: https://img.shields.io/npm/v/@lucidogen/test-repo.svg?style=flat
-[test-repo-url]: https://npmjs.org/package/@lucidogen/test-repo
+[test-repo-npm]: https://npmjs.org/package/@lucidogen/test-repo
 
 ### Release process
 
 Review and merge PRs into `next` branch. To release a production ready version, you need
-to add the commits from `next` to `master`.
+to add the commits from `next` to `master` with the following (github web interface does not
+work as it makes branches diverge):
 
 ```sh
 $ git checkout next
