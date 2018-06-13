@@ -25,7 +25,7 @@ script:
 after_success:
 - |
   if [[ $TRAVIS_SECURE_ENV_VARS == 'true' ]]; then
-    git remote set-url origin https://lucidogen-bot:${GH_TOKEN}@github.com/lucidogen/ts-project
+    git remote set-url origin https://lucidogen-bot:${GH_TOKEN}@github.com/lucidogen/lucidogen
     git config --global user.email "bot@lucidogen.io"
     git config --global user.name "Lucidogen Bot"
   fi
