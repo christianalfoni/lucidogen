@@ -5,10 +5,11 @@
   "license": "MIT",
   "scripts": {
     "build": "repo-cooker build",
-    "release": "repo-cooker --release",
-    "test": "repo-cooker test",
     "checkdeps": "repo-cooker --check-dependencies",
-    "fixdeps": "repo-cooker --fix-dependencies"
+    "fixdeps": "repo-cooker --fix-dependencies",
+    "lint": "repo-cooker lint",
+    "release": "repo-cooker --release",
+    "test": "repo-cooker test"
   },
   "repository": {
     "type": "git",
