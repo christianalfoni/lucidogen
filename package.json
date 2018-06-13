@@ -5,11 +5,29 @@
   "license": "MIT",
   "scripts": {
     "build": "repo-cooker build",
-    "release": "repo-cooker release"
+    "release": "repo-cooker --release",
+    "test": "repo-cooker test",
+    "checkdeps": "repo-cooker --check-dependencies",
+    "fixdeps": "repo-cooker --fix-dependencies"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lucidogen/lucidogen.git"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "repo-cooker": "^4.0.0",
+    "@types/jest": "22.2.3",
+    "commitizen": "2.10.1",
+    "coveralls": "3.0.1",
+    "cz-customizable": "5.2.0",
+    "cz-customizable-ghooks": "1.5.0",
+    "jest": "23.0.1",
+    "prettier": "1.13.3",
+    "ts-jest": "22.4.6",
+    "tslint": "5.10.0",
+    "tslint-config-prettier": "1.13.0",
+    "tslint-react": "3.6.0",
+    "typescript": "2.8.3"
+  }
 }
