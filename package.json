@@ -29,5 +29,13 @@
     "tslint-config-prettier": "1.13.0",
     "tslint-react": "3.6.0",
     "typescript": "2.8.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "setup/commitizen.js"
+    }
   }
 }
