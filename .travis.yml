@@ -18,23 +18,21 @@ notifications:
 script:
 - |
   if [[ $SKIP_TESTS != 'true' ]]; then
-    npm run lint;
-    npm test;
+    npm run checkdeps
+    npm run lint
+    npm test
   fi
 after_success:
 - |
   if [[ $TRAVIS_SECURE_ENV_VARS == 'true' ]]; then
-    git remote set-url origin https://lucidogen-bot:${GH_TOKEN}@github.com/lucidogen/ts-project;
-    git config --global user.email "bot@lucidogen.io";
-    git config --global user.name "Lucidogen Bot";
-  fi
-  if [[ $TRAVIS_BRANCH == 'master' || $TRAVIS_PULL_REQUEST == 'true' ]]; then
-    # repo-cooker coverage:upload;
+    git remote set-url origin https://lucidogen-bot:${GH_TOKEN}@github.com/lucidogen/ts-project
+    git config --global user.email "bot@lucidogen.io"
+    git config --global user.name "Lucidogen Bot"
   fi
   if [[ $TRAVIS_BRANCH == 'master' || $TRAVIS_BRANCH == 'next' ]] && [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then
-    printf "//registry.npmjs.org/:_authToken=$NPM_TOKEN\n" > ~/.npmrc;
-    npm install --no-save nodegit@0.20.3;
-    npm run release;
+    printf "//registry.npmjs.org/:_authToken=$NPM_TOKEN\n" > ~/.npmrc
+    npm install --no-save nodegit@0.20.3
+    npm run release
   fi
 branches:
   except:
